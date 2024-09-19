@@ -4,6 +4,28 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        getByName("debug") {
+//            storeFile = file("/Users/ermias/Documents/github_action.jks")
+//            storePassword = "google"
+//            keyAlias = "google"
+//            keyPassword = "google"
+            storeFile = file("../keystore.jks")
+            storePassword = System.getenv("ANDROID_KEYSTORE_PASSWORD")
+            keyAlias = System.getenv("ANDROID_KEY_ALIAS")
+            keyPassword = System.getenv("ANDROID_KEY_PASSWORD")
+        }
+        create("release") {
+//            storeFile = file("/Users/ermias/Documents/github_action.jks")
+//            storePassword = "google"
+//            keyAlias = "google"
+//            keyPassword = "google"
+            storeFile = file("../keystore.jks")
+            storePassword = System.getenv("ANDROID_KEYSTORE_PASSWORD")
+            keyAlias = System.getenv("ANDROID_KEY_ALIAS")
+            keyPassword = System.getenv("ANDROID_KEY_PASSWORD")
+        }
+    }
     namespace = "org.androidgithub"
     compileSdk = 34
 
