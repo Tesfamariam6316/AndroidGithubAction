@@ -59,9 +59,9 @@ jobs:
 #        run: ./gradlew bundleBundleAfatRelease
 
 
-      #4 Upload APK to Github Artifacts
+      #4 List APK file
       - name: List APK file
-        run: ls -alh app/release/
+        run: ls -alh app/build/outputs/apk/release/
 
       #5 Upload APK to Github Artifacts
       - name: Upload APK to Github Artifacts
