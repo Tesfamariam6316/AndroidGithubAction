@@ -79,9 +79,9 @@ jobs:
         id: create_release
         uses: actions/create-release@v1.1.0
         with:
-          tag_name: v1.0.3
-          release_name: Release v1.0.3
-          body: Release v1.0.3 notes for version - third3 big release
+          tag_name: v1.0.4
+          release_name: Release v1.0.4
+          body: Release v1.0.4 notes for version - fourth4 big release
           draft: false
           prerelease: false
         env:
